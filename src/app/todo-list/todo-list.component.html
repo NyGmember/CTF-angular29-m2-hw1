@@ -1,0 +1,15 @@
+<p>todoListComponent</p>
+
+<div class="accordion accordion-flush todoListBlock" id="accordionFlushExample">
+    <div class="accordion-item" *ngIf="tasks.length == 0">
+        No recent task. youcan add new one below.
+    </div>
+    <div class="accordion-item" *ngFor="let t of tasks">
+        <app-task 
+        [task]="t"
+        (OnDelete)="deleteTask($event)"></app-task>
+    </div>
+</div>
+<br/>
+<app-addtask
+    (OnAddTask)="addTask($event)"></app-addtask>

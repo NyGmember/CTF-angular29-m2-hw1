@@ -1,0 +1,22 @@
+<p>addtask componanent</p>
+<br/>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">New task</h5>
+    <h6 class="card-subtitle mb-2 text-muted">give me task name and that description:</h6>
+    <br/>
+    <div class="form-group">
+        <label for="taskNames">Task name</label>
+        <input type="text" pInputText [(ngModel)]="taskName" class="form-control" id="taskNames" placeholder="Enter name">
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="taskDetail">Task detail</label>
+        <textarea  pInputText [(ngModel)]="taskDetail" class="form-control" id="taskDetail" placeholder="Enter detail" rows="3"></textarea>
+    </div>
+    <br/>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="badge rounded-pill bg-light text-primary" (click)="addTask()">Add new task</button>
+    </div>
+  </div>
+</div>
